@@ -38,12 +38,8 @@ flutter run
 ```
 
 ## Dependencies
+Add this to your [`pubspec.yaml`](pubspec.yaml)
 
-Add this to your 
-
-pubspec.yaml
-
-:
 ```yaml
 dependencies:
   http: ^1.1.0
