@@ -6,11 +6,13 @@ import 'post_detail.dart';
 class PostsPage extends StatelessWidget {
   final HttpService httpService = HttpService();
 
+  PostsPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Posts"),
+        title: const Text("Posts"),
       ),
       body: FutureBuilder(
         future: httpService.getPosts(),
@@ -22,7 +24,7 @@ class PostsPage extends StatelessWidget {
               itemBuilder: (context, index) {
                 Post post = posts[index];
                 return Card(
-                  margin: EdgeInsets.all(8),
+                  margin: const EdgeInsets.all(8),
                   child: ListTile(
                       onTap: () {
                       Navigator.push(
@@ -34,7 +36,7 @@ class PostsPage extends StatelessWidget {
                     },
                     title: Text(
                       post.title,
-                      style: TextStyle(fontWeight: FontWeight.bold),
+                      style: const TextStyle(fontWeight: FontWeight.bold),
                     ),
                     subtitle: Text(
                       post.body,
@@ -51,7 +53,7 @@ class PostsPage extends StatelessWidget {
           } else if (snapshot.hasError) {
             return Center(child: Text('Error: ${snapshot.error}'));
           }
-          return Center(child: CircularProgressIndicator());
+          return const Center(child: CircularProgressIndicator());
         },
       ),
     );

@@ -18,6 +18,16 @@ class PostDetail extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
+              'User ID: ${post.userId}',
+              style: const TextStyle(fontSize: 16),
+            ),
+            const SizedBox(height: 16),
+            Text(
+              'Post ID: ${post.id}',
+              style: const TextStyle(fontSize: 16),
+            ),
+            const SizedBox(height: 16),
+            Text(
               post.title,
               style: const TextStyle(
                 fontSize: 24,
