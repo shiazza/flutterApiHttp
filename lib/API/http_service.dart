@@ -2,7 +2,7 @@ import 'dart:async';
 import 'dart:convert';
 
 import 'package:http/http.dart';
-import 'post_model.dart'; 
+import '../post_model.dart'; 
 
 class HttpService { 
   final String postsURL = "https://jsonplaceholder.typicode.com/posts"; 
